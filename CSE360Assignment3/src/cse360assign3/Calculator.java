@@ -19,31 +19,31 @@ public class Calculator {
 	}
 	
 	/** this return the total
-	 * @return the total amount
+	 * @return the total amount (the total variable)
 	 * */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
-	/** We are adding values together
-	 * @param value 
+	/** We are adding the total variable with the parameter
+	 * @param value the value we will add to the total variable 
 	 * */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
-	/** We are subtracting values
-	 * @param value 
+	/** We are subtracting the parameter from the total variable 
+	 * @param value the value we will take from the total variable
 	 * */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
-	/**we are multiplying values together
-	 * @param value
+	/**we are multiplying the total by the total by the parameter
+	 * @param value the value that will be multiplied by the total squared 
 	 * */
 	public void multiply (int value) {
-		
+		total = (total * total) * value; 
 	}
 	
 	/** we are dividing values together
@@ -51,6 +51,12 @@ public class Calculator {
 	 * */
 	public void divide (int value) {
 		
+		if(value != 0){
+			total = total / value;
+		}
+		else{
+			total = 0;
+		}
 	}
 	
 	/** we are returning the history of what we have done
